@@ -1,0 +1,38 @@
+{
+    "build": {
+      // Path is relataive to the devcontainer.json file.
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        // Set *default* container specific settings.json values on container create.
+        "settings": {
+            "editor.codeActionsOnSave": {
+                "source.fixAll.eslint": true
+              },
+              "[typescript]": {
+                "editor.formatOnSave": true
+              },
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "git.autofetch": true,
+            "files.autoSave": "afterDelay",
+            "git.pullBeforeCheckout": true,
+            "editor.inlayHints.padding": true,
+            "javascript.inlayHints.parameterNames.enabled": "all",
+            "javascript.inlayHints.parameterTypes.enabled": true,
+            "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+            "javascript.inlayHints.variableTypes.enabled": true,
+            "typescript.inlayHints.parameterTypes.enabled": true,
+            "typescript.inlayHints.enumMemberValues.enabled": true,
+            "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+            "typescript.inlayHints.parameterNames.enabled": "all"
+        }
+    },
+    "extensions": [
+      "esbenp.prettier-vscode",
+      "bungcip.better-toml"
+  ]
+},
+
+"onCreateCommand": "/bin/bash .devcontainer/onCreateCommand.sh"
+}
